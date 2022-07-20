@@ -1,10 +1,8 @@
-FROM golang:1.18-alpine3.14@sha256:70ba8ec1a0e26a828c802c76ecfc65d1efe15f3cc04d579747fd6b0b23e1cea5 AS base
+FROM golang:1.18-alpine3.14@sha256:70ba8ec1a0e26a828c802c76ecfc65d1efe15f3cc04d579747fd6b0b23e1cea5 AS go-md2man
 RUN apk add --update-cache --no-cache \
         git \
         make
-
-FROM base AS go-md2man
-# renovate: datasource=github-releases depName=containers/skopeo
+# renovate: datasource=github-releases depName=cpuguy83/go-md2man
 ARG GO_MD2MAN_VERSION=2.0.2
 WORKDIR $GOPATH/src/github.com/cpuguy83/go-md2man
 RUN test -n "${GO_MD2MAN_VERSION}" \
