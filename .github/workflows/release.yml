@@ -39,7 +39,7 @@ jobs:
       - name: Store tarball
         uses: actions/upload-artifact@v3
         with:
-          name: go-md2man-${{ matrix.arch }}.tar.gz
+          name: ${{ matrix.arch }}
           path: go-md2man-${{ matrix.arch }}.tar.gz
 
   release:
@@ -78,4 +78,4 @@ jobs:
           omitBody: true
           prerelease: false
           replacesArtifacts: true
-          artifacts: "*/go-md2man-*.tar.gz"
+          artifacts: "*/*.tar.gz"
