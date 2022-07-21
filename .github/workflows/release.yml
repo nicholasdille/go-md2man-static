@@ -60,11 +60,6 @@ jobs:
           version="$(cat Dockerfile | grep "ARG GO_MD2MAN_VERSION=" | sed -E 's/ARG GO_MD2MAN_VERSION=//')"
           echo "::set-output name=version::${version}"
 
-      - name: Debug
-        run: |
-          pwd
-          find . -type f
-
       - name: Create release
         id: create_release
         if: github.event_name != 'pull_request'
@@ -78,4 +73,4 @@ jobs:
           omitBody: true
           prerelease: false
           replacesArtifacts: true
-          #artifacts: "*/*.tar.gz"
+          artifacts: "*/*.tar.gz"
