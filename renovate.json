@@ -15,8 +15,7 @@
     ":separateMajorReleases",
     ":automergePr",
     ":automergeRequireAllStatusChecks",
-    ":automergeDigest",
-    ":automergePatch",
+    ":automergeAll",
     ":semanticCommits",
     
     ":enableVulnerabilityAlerts",
@@ -47,10 +46,6 @@
   ],
 
   "packageRules": [
-    {
-      "updateTypes": ["pin", "digest", "patch", "minor", "major"],
-      "automerge": true
-    },
     {
       "matchPackageNames": [
         "cpuguy83/go-md2man"
