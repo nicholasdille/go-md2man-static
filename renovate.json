@@ -38,7 +38,7 @@
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "#syntax=(?<depName>.*?):(?<currentValue>.*?)"
+        "#syntax=(?<depName>.*?):(?<currentValue>.*?)\\n"
       ],
       "datasourceTemplate": "docker"
     },
