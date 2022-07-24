@@ -34,7 +34,16 @@
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n(ENV|ARG) .*?_VERSION=(?<currentValue>.*)\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
+    },
+    {
+      "fileMatch": [
+        "(^|/)Dockerfile[^/]*$"
+      ],
+      "matchStrings": [
+        "#syntax=(?<depName>.*?):(?<currentValue>.*?)"
+      ],
+      "datasourceTemplate": "docker"
+    },
   ],
 
   "packageRules": [
