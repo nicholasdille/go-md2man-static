@@ -36,7 +36,7 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     },
     {
-      "fileMatch": ["(^|/)Dockerfile$"],
+      "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
         "#syntax=(?<depName>.*?):(?<currentValue>.*?)"
       ],
