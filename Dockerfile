@@ -1,4 +1,4 @@
-#syntax=docker/dockerfile:1.4.2
+#syntax=docker/dockerfile:1.4.3
 
 FROM golang:1.18-alpine3.14@sha256:70ba8ec1a0e26a828c802c76ecfc65d1efe15f3cc04d579747fd6b0b23e1cea5 AS go-md2man
 RUN apk add --update-cache --no-cache \
